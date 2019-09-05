@@ -52,12 +52,29 @@ numCompletedPixel = 0;
 
 %%
 
+% Optimizaing the search space
+
+rowTotal = ceil(a / gapBwnBlock)* gapBwnBlock : gapBwnBlock : b ;
+colTotal = ceil(a / gapBwnBlock) * gapBwnBlock : gapBwnBlock : b;
+
+indexImgTotal = zeros(imgSize);
+indexImgTotal(rowTotal, colTotal) = 1;
+
+mask = logical(img);
+searchIndexMatrix =double(mask).* indexImgTotal;
+
+[rows, cols] = find(searchIndexMatrix);
+
 % Bayesian-based NonLocal Means Algorithm
 
 %
 tic
-for row = ceil(a / gapBwnBlock)* gapBwnBlock : gapBwnBlock : b 
-    for col = ceil(a / gapBwnBlock) * gapBwnBlock : gapBwnBlock : b
+% for row = ceil(a / gapBwnBlock)* gapBwnBlock : gapBwnBlock : b 
+%     for col = ceil(a / gapBwnBlock) * gapBwnBlock : gapBwnBlock : b
+
+for i = 1:size(cols, 1)
+    col = cols(i);
+    row = rows(i);
 %        row = 12;
 %        col = 200;
         
@@ -393,7 +410,7 @@ for row = ceil(a / gapBwnBlock)* gapBwnBlock : gapBwnBlock : b
         numCompletedPixel = numCompletedPixel + 1;        
         disp(strcat('The completed number of pixel: ', num2str(numCompletedPixel)))
     end    
-end
+% end
 
 %%
 
