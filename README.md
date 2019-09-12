@@ -12,5 +12,6 @@ Coupé, Pierrick, et al. "Nonlocal means-based speckle filtering for ultrasound 
 
 # Basic Principle
 The blockwise Nonlocal Means algorithm is finished. The basic principle is shown below:
+<img src="http://latex.codecogs.com/gif.latex?NL(u)(B_j) = \sum_{i\in\Delta_j}w(B_i,B_j)u(Bi)" border="0"/>
 
 
