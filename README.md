@@ -22,4 +22,12 @@ with <img src="http://latex.codecogs.com/svg.latex? w(B_i,B_j)=\frac{1}{Z^j}e^{-
 <img src="http://latex.codecogs.com/svg.latex? dp(u(B_i),u(B_j))" border="0"/>:the pearson distance between blockwise
 
 
+# Results
 
+The original ultrasound image (with speckle):
+
+![noisy image](https://github.com/Xingorno/Optimized-Bayesian-Nonlocal-means-with-block-OBNLM-/blob/master/noisyImage.png?raw=true)
+
+The despeckled ultrasound image:
+
+![despeckled image](https://github.com/Xingorno/Optimized-Bayesian-Nonlocal-means-with-block-OBNLM-/blob/master/despeckledImage.png?raw=true)
